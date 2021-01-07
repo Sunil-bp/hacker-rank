@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+r = int(input())
+words_dict = OrderedDict()
+for _ in range(r):
+    word = input()
+    words_dict[word] = words_dict.get(word,0)+ 1
+print(len(words_dict))
+for key in words_dict:
+    print(str(words_dict[key])+" " , end="")

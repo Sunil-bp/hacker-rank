@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l = []
+data = input().split()
+for _ in range(int(data[1])):
+    l.append(list(map(float,input().split())))
+
+average =[sum(i)/int(data[1]) for i in list(zip(*l)) ]
+
+print(*average, sep ="\n")

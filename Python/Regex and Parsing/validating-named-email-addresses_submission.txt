@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N = int(input())
+
+for _ in range(N):
+    n,e= input().split()
+    import re
+    s  = re.search("(?<=<)[a-zA-Z][\w|\-|.|_]+@[a-zA-Z]+\.[a-zA-Z]{1,3}(?=>)",e)
+    if s:
+        print(n,e)

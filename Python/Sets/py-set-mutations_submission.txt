@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+input()
+set_i = set(map(int,input().split()))
+op_num = int(input())
+for _ in range(op_num):
+    op = input()
+    if op.find("inter")==0:
+        set_i.intersection_update(set(map(int,input().split())))
+    elif op.find("sym")==0:
+        set_i.symmetric_difference_update(set(map(int,input().split())))
+    elif op.find("up")==0:
+        set_i.update(set(map(int,input().split())))
+
+    else:
+        set_i.difference_update(set(map(int,input().split())))
+print(sum(map(int,set_i)))

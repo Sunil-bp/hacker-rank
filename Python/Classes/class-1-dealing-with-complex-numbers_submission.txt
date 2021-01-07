@@ -1,0 +1,22 @@
+
+from math import pow
+class Complex(complex):
+    def __add__(self, no):
+        return Complex(complex.__add__(self, no))
+
+    def __sub__(self, no):
+        return Complex(complex.__sub__(self, no))
+
+    def __mul__(self, no):
+        return Complex(complex.__mul__(self, no))
+
+    def __truediv__(self, no):
+        return Complex(complex.__truediv__(self, no))
+
+    def mod(self):
+        return Complex(complex.__abs__(self))
+
+    def __str__(self, precision=2):
+        return str(("%."+"%df"%precision)%float(self.real))+('+' if self.imag>=0 else '-')+str(("%."+"%df"%precision)%float(abs(self.imag)))+'i'
+
+

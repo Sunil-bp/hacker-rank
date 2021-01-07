@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+input()
+t_set = list(map(int,input().split()))
+a_set = set(map(int,input().split()))
+b_set = set(map(int,input().split()))
+print(sum([(i in a_set) - (i in b_set) for i in t_set]))

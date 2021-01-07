@@ -1,0 +1,27 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+
+first_multiple_input = input().rstrip().split()
+
+n = int(first_multiple_input[0])
+
+m = int(first_multiple_input[1])
+
+matrix = []
+
+matrix=([input() for _ in range(n)])
+# print(matrix)
+list_decoded=''
+for i in range(m):
+    for j in matrix:
+        list_decoded+=(list(j)[i])
+# print(list_decoded)
+print(re.sub("(?<=[\w])[^\w]+(?=[\w])"," ",list_decoded),end="")

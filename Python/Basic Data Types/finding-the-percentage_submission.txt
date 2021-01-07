@@ -1,0 +1,14 @@
+# if __name__ == '__main__':
+#     n = int(input())
+#     student_marks = {}
+#     for _ in range(n):
+#         name, *line = input().split()
+#         scores = list(map(float, line))
+#         student_marks[name] = scores
+#     query_name = input()
+if __name__=='__main__':
+    student_data =  [input().split() for _ in range(int(input()))]
+    final_student = input()
+    student_dict = {}
+    student_dict = {each_s[0]:[float(i) for i in (each_s[1:])] for each_s in student_data}
+    print("{0:.2f}".format(sum(student_dict[final_student])/len(student_dict[final_student])))

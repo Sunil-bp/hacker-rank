@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+for _ in range(int(input())):
+    rer = input()
+    try:
+        m = re.search(rer, 'abcdef')
+        print("True")
+    except :
+        print("False")

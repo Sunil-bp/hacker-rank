@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l = int(input())
+s= []
+import re
+for _ in range(l):
+    d = input()
+    d= re.sub("(?<= )(&&)(?= )","and",d)
+    d= re.sub("(?<= )(\|\|)(?= )","or",d)
+    s.append(d)
+
+for i in s:
+    print(i)
+

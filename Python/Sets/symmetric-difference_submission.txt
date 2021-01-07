@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+input()
+l1 = set(map(int,(input().split())))
+input()
+l2 = set(map(int,(input().split())))
+l3 = set()
+l3.update(l1.difference(l2).union(l2.difference(l1)))
+for i in sorted(list(l3)):
+    print(i)

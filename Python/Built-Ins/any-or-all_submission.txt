@@ -1,0 +1,3 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+no,lis = input(),list(map(int,input().split()))
+print( all([i>0 for i in lis]) and any([str(i)==str(i)[::-1] for i in lis]) )

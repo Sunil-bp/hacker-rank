@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+for _ in range(int(input())):
+    s = input()
+    if re.search("([A-Z]).*([A-Z])",s) and re.search("\d.*\d.*\d",s) and re.search("[a-zA-Z0-9]{10}",s) and not re.match(r".*(.).*\1.*", s):
+        print("Valid")
+    else:
+        print("Invalid")

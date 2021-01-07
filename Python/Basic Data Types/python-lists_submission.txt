@@ -1,0 +1,41 @@
+def insert(list_1,*args):
+    list_1.insert(args[0][0],args[0][1])
+    return list_1
+
+def append(list_1,*args):
+    list_1.append(args[0][0])
+    return list_1
+def pop(list_1,*args):
+    list_1.pop()
+    return list_1
+
+def remove(list_1,*args):
+    list_1.remove(args[0][0])
+    return list_1
+def print_o(list_1,*args):
+    print(list_1)
+    return list_1
+
+def sort(list_1,*args):
+    list_1.sort()
+    
+    return list_1
+
+def reverse(list_1,*args):
+    list_1.reverse()
+    
+    return list_1
+
+if __name__ == '__main__':
+    
+
+    set_commands ={"insert":insert,"append":append,"pop":pop,"remove":remove,                                   "print":print_o,
+                        "sort":sort,"reverse":reverse}
+    list_1=[]
+    no_com = int(input())
+    for _ in range(no_com):
+        command_reviced =input().split()
+        func = set_commands.get(command_reviced[0], lambda: "nothing")
+        # print(command_reviced[1:])
+        list_1 = func(list_1,list(map(int,command_reviced[1:])))
+

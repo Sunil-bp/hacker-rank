@@ -1,0 +1,11 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    for i in range(int(len(string)/k)):
+        t = string[i*k:(i*k)+k]
+        new_t =""
+        for i in t:
+            if i not in new_t:
+                new_t += i
+        print(new_t)
+
+

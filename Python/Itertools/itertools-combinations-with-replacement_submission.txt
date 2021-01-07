@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from itertools import combinations_with_replacement
+i = input().split()
+l = list(combinations_with_replacement(sorted(i[0]),int(i[1])))
+for i in l:
+    print(*i,sep="")

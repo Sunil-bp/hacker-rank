@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from itertools import permutations
+inp = input().split()
+lis  =list(permutations(inp[0],int(inp[1])))
+for i in sorted(lis):
+    print(*i,sep="")

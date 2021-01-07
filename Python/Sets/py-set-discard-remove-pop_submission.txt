@@ -1,0 +1,11 @@
+n = int(input())
+s = set(map(int, input().split()))
+op_n = int(input())
+for i in range(op_n):
+    op = input().split()
+    if op[0].find("pop")==0:
+        s.pop()
+    else:
+        s.discard(int(op[1]))
+
+print(sum(s))

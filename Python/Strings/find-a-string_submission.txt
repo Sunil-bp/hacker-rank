@@ -1,0 +1,9 @@
+def count_substring(string, sub_string):
+    count = 0 
+    istance = string.find(sub_string)
+    if istance != -1 and string[istance+1:]:
+        count +=1
+        count +=count_substring(string[istance+1:], sub_string)
+
+    return count
+

@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+input()
+data = input().split()
+v = int(input())
+lis = list(combinations(data,v))
+a_count = 0
+for w in lis:
+    if "a" in w:
+        a_count +=1
+print(a_count / len(lis))

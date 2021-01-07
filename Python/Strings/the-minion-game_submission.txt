@@ -1,0 +1,17 @@
+
+def minion_game(string):
+    vowel = ["A","E","I","O","U"]
+    kevin_words = 0
+    swuart_word = 0
+    for i in range(len(string)):
+        if string[i] in vowel:
+            kevin_words +=(len(string)-i)
+        else:
+            swuart_word += (len(string)-i)
+
+    if (kevin_words)>(swuart_word):
+        print("Kevin",str((kevin_words)))
+    elif (kevin_words)<(swuart_word):
+        print("Stuart",str((swuart_word)))
+    else:
+        print("Draw")

@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+set_a = set(map(int,input().split()))
+for _ in range(int(input())):
+    set_b = set(map(int,input().split()))
+    if  not set_a.intersection(set_b)==set_a and not set_b.difference(set_a):
+        continue
+    else:
+        print("False")
+        exit()
+print("True")

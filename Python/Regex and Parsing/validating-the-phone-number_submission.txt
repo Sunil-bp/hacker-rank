@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+import re
+
+def bool1(d):
+    if d:
+        return "YES"
+    return "NO"
+
+for _ in range(n):
+    print(bool1(re.search("^[789]\d{9}$",input())))

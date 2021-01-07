@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+k = int(input())
+arr = list(map(int,input().split()))
+set_arr  = set(arr)
+print((k*(sum(set_arr))-sum(arr))//(k-1))
+    

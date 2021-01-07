@@ -1,0 +1,6 @@
+'''using the formated code from editorial '''
+if __name__ == '__main__':
+    list_to_use = [[input(),float(input())] for _ in range(int(input()))]
+    getting_marks_uniqe_ordered = sorted(set([i[1] for i in list_to_use]))
+    for name in sorted([indvudual[0] for indvudual in list_to_use if indvudual[1]==getting_marks_uniqe_ordered[1]] ):
+        print(name)

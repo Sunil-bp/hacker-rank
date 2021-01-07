@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import math 
+ab = int(input())
+bc = int(input())
+a_c = math.atan2(ab,bc)
+print(str(round(math.degrees(a_c)))+"°")

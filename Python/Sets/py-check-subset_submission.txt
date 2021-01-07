@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+for _ in range(int(input())):
+    input()
+    set_a = set(map(int,input().split()))
+    input()
+    set_b = set(map(int,input().split()))
+    if set_a.difference(set_b):
+        print("False")
+    else:
+        print("True")

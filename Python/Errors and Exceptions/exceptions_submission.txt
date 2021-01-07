@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+for _ in range(int(input())):
+    a  = input().split()
+    try: 
+        print(int(a[0])//int(a[1]))
+    except ZeroDivisionError as ze:
+        print("Error Code:",ze)
+    except ValueError as ve:
+        print("Error Code:",ve)

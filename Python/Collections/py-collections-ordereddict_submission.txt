@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+r = int(input())
+ordered_dictionary = OrderedDict()
+for _ in range(r):
+    data = input().split()
+    ordered_dictionary[" ".join(data[:-1])] =ordered_dictionary.get(" ".join(data[:-1]),0)+ int(data[-1])
+for key in ordered_dictionary:
+    print(key, ordered_dictionary[key])

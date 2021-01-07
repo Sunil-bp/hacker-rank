@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from collections import Counter
+input()
+size = Counter(map(int,input().split()))
+profit = 0
+for _ in range(int(input())):
+    require = list(map(int,input().split()))
+    if require[0] in list(size.keys()):
+        profit += require[1]
+        size[require[0]] -=1
+        if size[require[0]] == 0:
+            del(size[require[0]])
+print(profit)

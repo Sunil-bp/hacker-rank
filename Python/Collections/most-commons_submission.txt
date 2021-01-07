@@ -1,0 +1,15 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+
+if __name__ == '__main__':
+    s = Counter(list(input()))
+    d = s.items()
+    for char,occ in sorted(d, key=lambda c: (-c[1], c[0]))[:3]:
+        print(char,occ)

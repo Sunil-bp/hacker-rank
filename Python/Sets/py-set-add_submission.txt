@@ -1,0 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+s_contry = set([input() for _ in range(int(input()))])
+print(len(s_contry))

@@ -1,0 +1,13 @@
+
+import re
+# Complete the solve function below.
+def solve(s):
+     
+    
+    match= re.search("(?<=\s)[a-z]|^[a-z]",s)
+    while match:
+        
+        s = re.sub("(?<=\s)[a-z]|^[a-z]",s[match.start()].upper(),s,1)
+        match= re.search("(?<=\s)[a-z]|^[a-z]",s)
+    return s
+
